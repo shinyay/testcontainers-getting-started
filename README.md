@@ -23,7 +23,10 @@ dependencies {
   - spring-boot-starter-web
   - spring-boot-starter-webflux
   - spring-boot-starter-data-jpa
-
+- org.flywaydb
+  - flyway-core
+- org.postgresql
+  - postgresql
 ## Demo
 
 ## Features
