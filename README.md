@@ -17,6 +17,13 @@ dependencies {
 	testImplementation("org.testcontainers:junit-jupiter:1.15.0-rc2")
 }
 ```
+
+#### Spring Boot Dependency
+- org.springframework.boot
+  - spring-boot-starter-web
+  - spring-boot-starter-webflux
+  - spring-boot-starter-data-jpa
+
 ## Demo
 
 ## Features
