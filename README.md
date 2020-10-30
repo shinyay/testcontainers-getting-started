@@ -3,6 +3,13 @@
 Testcontainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.
 
 ## Description
+### Dependency
+#### Testcontainers Dependency
+- org.testcontainers
+  - postgresql
+    - 1.15.0-rc2
+  - junit-jupiter
+    - 1.15.0-rc2
 
 ## Demo
 
