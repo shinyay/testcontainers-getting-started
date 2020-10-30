@@ -11,6 +11,12 @@ Testcontainers is a Java library that supports JUnit tests, providing lightweigh
   - junit-jupiter
     - 1.15.0-rc2
 
+```kotlin
+dependencies {
+	testImplementation("org.testcontainers:postgresql:1.15.0-rc2")
+	testImplementation("org.testcontainers:junit-jupiter:1.15.0-rc2")
+}
+```
 ## Demo
 
 ## Features
