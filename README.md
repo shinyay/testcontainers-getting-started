@@ -27,6 +27,16 @@ dependencies {
   - flyway-core
 - org.postgresql
   - postgresql
+
+### @Testcontainers
+You should add `@Testcontainers` to Class to register **JUnit 5 Extensions**
+
+```kotlin
+@Testcontainers
+@SpringBootTest
+class TestcontainersGettingStartedApplicationTests
+```
+
 ## Demo
 
 ## Features
