@@ -11,7 +11,11 @@ class TestcontainersGettingStartedApplicationTests {
 	companion object {
 
 		@Container
-		val container = PostgreSQLContainer<Nothing>("postgres:12")
+		val container = PostgreSQLContainer<Nothing>("postgres:12").also {
+			it.withDatabaseName("testdb")
+			it.withUsername("scott")
+			it.withPassword("tiget")
+		}
 	}
 
 }
