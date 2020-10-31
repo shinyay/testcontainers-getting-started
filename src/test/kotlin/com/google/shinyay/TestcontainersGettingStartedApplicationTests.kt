@@ -19,11 +19,17 @@ class TestcontainersGettingStartedApplicationTests(val repository: BookRepositor
 
 	companion object {
 
+//		@Container
+//		val container = PostgreSQLContainer<Nothing>("postgres:12").also {
+//			it.withDatabaseName("testdb")
+//			it.withUsername("scott")
+//			it.withPassword("tiget")
+//		}
 		@Container
-		val container = PostgreSQLContainer<Nothing>("postgres:12").also {
-			it.withDatabaseName("testdb")
-			it.withUsername("scott")
-			it.withPassword("tiget")
+		val container = PostgreSQLContainer<Nothing>("postgres:12").apply {
+			withDatabaseName("testdb")
+			withUsername("duke")
+			withPassword("s3crEt")
 		}
 
 		@JvmStatic
