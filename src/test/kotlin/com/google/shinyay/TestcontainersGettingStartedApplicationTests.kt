@@ -21,6 +21,7 @@ class TestcontainersGettingStartedApplicationTests {
 			it.withPassword("tiget")
 		}
 
+		@JvmStatic
 		@DynamicPropertySource
 		fun properties(registry: DynamicPropertyRegistry) {
 			registry.add("spring.datasource.url", container::getJdbcUrl)
