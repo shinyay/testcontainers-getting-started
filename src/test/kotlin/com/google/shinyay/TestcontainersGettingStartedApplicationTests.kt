@@ -52,8 +52,8 @@ class TestcontainersGettingStartedApplicationTests(val repository: BookRepositor
 				.accept(MediaType.APPLICATION_JSON)
 				.exchange()
 				.expectBody()
-				.jsonPath("$.length()").isEqualTo(1)
-				.jsonPath("$[0].id").isEqualTo(1)
+				.jsonPath("$.length()").isEqualTo(2)
+				.jsonPath("$[0].id").isEqualTo(2)
 				.jsonPath("$[0].isbn").isEqualTo("01")
 				.jsonPath("$[0].title").isEqualTo("Java")
 	}
