@@ -47,6 +47,18 @@ companion object {
 }
 ```
 
+### @DynamicPropertySource
+
+You can configure Spring properties with `@DynamicPropertySource`
+
+```kotlin
+		@JvmStatic
+		@DynamicPropertySource
+		fun properties(registry: DynamicPropertyRegistry) {
+			registry.add("spring.datasource.url", container::getJdbcUrl)
+		}
+```
+
 ## Demo
 
 ## Features
