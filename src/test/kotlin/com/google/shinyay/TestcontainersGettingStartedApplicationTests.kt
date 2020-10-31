@@ -2,7 +2,7 @@ package com.google.shinyay
 
 import com.google.shinyay.entity.Book
 import com.google.shinyay.repository.BookRepository
-import org.junit.jupiter.api.Test
+import org.junit.Test
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType
 import org.springframework.test.context.DynamicPropertyRegistry
@@ -40,6 +40,7 @@ class TestcontainersGettingStartedApplicationTests(val repository: BookRepositor
 			registry.add("spring.datasource.password", container::getPassword)
 		}
 	}
+
 
 	@Test
 	fun shouldReturnAllBooks() {
