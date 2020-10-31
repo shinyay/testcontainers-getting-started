@@ -19,17 +19,11 @@ class TestcontainersGettingStartedApplicationTests(val repository: BookRepositor
 
 	companion object {
 
-//		@Container
-//		val container = PostgreSQLContainer<Nothing>("postgres:12").also {
-//			it.withDatabaseName("testdb")
-//			it.withUsername("scott")
-//			it.withPassword("tiget")
-//		}
 		@Container
-		val container = PostgreSQLContainer<Nothing>("postgres:12").apply {
-			withDatabaseName("testdb")
-			withUsername("duke")
-			withPassword("s3crEt")
+		val container = PostgreSQLContainer<Nothing>("postgres:12").also {
+			it.withDatabaseName("testdb")
+			it.withUsername("scott")
+			it.withPassword("tiget")
 		}
 
 		@JvmStatic
@@ -53,7 +47,7 @@ class TestcontainersGettingStartedApplicationTests(val repository: BookRepositor
 				.exchange()
 				.expectBody()
 				.jsonPath("$.length()").isEqualTo(2)
-				.jsonPath("$[0].id").isEqualTo(2)
+				.jsonPath("$[0].id").isEqualTo(1)
 				.jsonPath("$[0].isbn").isEqualTo("01")
 				.jsonPath("$[0].title").isEqualTo("Java")
 	}
