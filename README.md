@@ -37,7 +37,7 @@ You should add `@Testcontainers` to Class to register **JUnit 5 Extensions**
 class TestcontainersGettingStartedApplicationTests
 ```
 
-### @Container
+### @Container 
 Define PostgreSQLContainer in **companion object**
 
 ```kotlin
