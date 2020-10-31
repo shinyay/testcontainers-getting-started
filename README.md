@@ -38,7 +38,8 @@ class TestcontainersGettingStartedApplicationTests
 ```
 
 ### @Container 
-Define PostgreSQLContainer in **companion object**
+Define PostgreSQLContainer in **companion object**, which is Singleton.
+
 
 ```kotlin
 companion object {
@@ -52,12 +53,16 @@ companion object {
 You can configure Spring properties with `@DynamicPropertySource`
 
 ```kotlin
-		@JvmStatic
-		@DynamicPropertySource
-		fun properties(registry: DynamicPropertyRegistry) {
-			registry.add("spring.datasource.url", container::getJdbcUrl)
-		}
+@JvmStatic
+@DynamicPropertySource
+fun properties(registry: DynamicPropertyRegistry) {
+    registry.add("spring.datasource.url", container::getJdbcUrl)
+}
 ```
+
+#### @JvmStatin / Companion Object
+When you refer to Companion object from Java, you can see it as static Companion function.
+With `@JvmStatic` you can see static function without Companion.
 
 ## Demo
 
