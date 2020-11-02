@@ -45,7 +45,7 @@ class ApplicationTest() {
     @Test
     fun shouldReturnAllBooks() {
 
-        this.bookRepository.save(Book(1L, "01", "Java"))
+        this.bookRepository.save(Book(1L, "01", "Jaav"))
         this.bookRepository.save(Book(2L, "02", "Kotlin"))
 
         this.webTestClient.get()
