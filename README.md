@@ -64,6 +64,19 @@ fun properties(registry: DynamicPropertyRegistry) {
 When you refer to Companion object from Java, you can see it as static Companion function.
 With `@JvmStatic` you can see static function without Companion.
 
+### Test with WebTestClient
+
+```kotlin
+this.webTestClient.get()
+        .uri("/books")
+        .accept(MediaType.APPLICATION_JSON)
+        .exchange()
+        .expectStatus().is2xxSuccessful
+        .expectBody()
+          .jsonPath("$.length()").isEqualTo(2)
+          .jsonPath("$[0].title").isEqualTo("Java")
+```
+
 ## Demo
 
 ## Features
