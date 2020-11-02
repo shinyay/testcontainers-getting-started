@@ -66,6 +66,12 @@ With `@JvmStatic` you can see static function without Companion.
 
 ### Test with WebTestClient
 
+- `WebTestClient.ResponseSpec`
+  - expectHeader()
+  - expectCookie()
+  - expectStatus()
+  - expectBody()
+
 ```kotlin
 this.webTestClient.get()
         .uri("/books")
