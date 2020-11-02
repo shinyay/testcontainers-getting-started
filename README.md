@@ -98,6 +98,10 @@ class ApplicationTest() {
 ```
 
 ## Demo
+### Test with Testcontainers
+```shell script
+$ ./gradlew clean test
+```
 
 ## Features
 
