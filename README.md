@@ -105,6 +105,17 @@ $ ./gradlew clean test
 
 ![demo](https://user-images.githubusercontent.com/3072734/97831413-54400d00-1d13-11eb-852d-697a5fbaaee6.gif)
 
+### BootRun
+#### PostgreSQL as a Container
+```shell script
+$ docker run --rm -d \
+  --name postgres\
+  -p 5432:5432 \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres -p 5432:5432 \
+  postgres:13-alpine
+```
+
 ## Features
 
 - feature:1
