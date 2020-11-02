@@ -53,7 +53,8 @@ class ApplicationTest() {
                 .accept(MediaType.APPLICATION_JSON)
                 .exchange()
                 .expectStatus().is2xxSuccessful
-                .expectBody().jsonPath("$.length()").isEqualTo(2)
+                .expectBody()
+                .jsonPath("$.length()").isEqualTo(2)
                 .jsonPath("$[0].id").isEqualTo(1)
                 .jsonPath("$[0].isbn").isEqualTo("01")
                 .jsonPath("$[0].title").isEqualTo("Java")
