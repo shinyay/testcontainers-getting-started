@@ -103,6 +103,8 @@ class ApplicationTest() {
 $ ./gradlew clean test
 ```
 
+![demo](https://user-images.githubusercontent.com/3072734/97831413-54400d00-1d13-11eb-852d-697a5fbaaee6.gif)
+
 ## Features
 
 - feature:1
