@@ -83,6 +83,20 @@ this.webTestClient.get()
           .jsonPath("$[0].title").isEqualTo("Java")
 ```
 
+### Field Injection for Test
+You should implement the dependency injection during test like follows.
+Otherwise, you will get an error about parameters.
+
+```kotlin
+class ApplicationTest() {
+    @Autowired
+    private lateinit var bookRepository: BookRepository
+
+    @Autowired
+    private lateinit var webTestClient: WebTestClient
+}
+```
+
 ## Demo
 
 ## Features
