@@ -119,7 +119,10 @@ $ docker run --rm -d \
 $ docker-compose up -d
 ```
 
-
+#### Run Spring App
+```
+$ ./gradlew clean bootRun
+```
 
 ## Features
 
